@@ -1,0 +1,243 @@
+/* style.css */
+
+/* Estilos generales para todo el cuerpo de la página */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap');
+
+body {
+    font-family: 'Nunito Sans', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #191a23 0%, #23243a 100%);
+    color: #f1f1f1;
+    min-height: 100vh;
+    transition: background 0.5s cubic-bezier(.4,0,.2,1);
+}
+
+
+
+/* Estilos para el encabezado principal de la página */
+header {
+    background: rgba(25, 26, 35, 0.95);
+    color: #f8f8f8;
+    padding: 2.5rem 0 1.2rem 0;
+    text-align: center;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.25);
+    border-bottom: 1px solid #31324a;
+    transition: background 0.5s cubic-bezier(.4,0,.2,1);
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+    font-size: 2.4rem;
+    font-family: 'Poppins', 'Nunito Sans', Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 8px #181828;
+}
+
+
+
+
+header p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #b7b8d7;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.tech-stack {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(56px, 1fr));
+    gap: 24px;
+    justify-items: center;
+    align-items: center;
+    padding: 1.5rem 0 1.5rem 0;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.tech-stack img {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    filter: grayscale(10%) brightness(0.97) drop-shadow(0 2px 6px #181828);
+    opacity: 0.98;
+    transition: transform 0.22s cubic-bezier(.4,0,.2,1), filter 0.22s, opacity 0.22s;
+    background: none;
+    border-radius: 8px;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+
+.tech-stack img:hover {
+    transform: scale(1.14) rotate(-3deg);
+    filter: grayscale(0%) brightness(1.10) drop-shadow(0 4px 16px #4e54c8);
+    opacity: 1;
+    background: none;
+}
+@media (max-width: 900px) {
+    .tech-stack {
+        gap: 16px;
+        max-width: 98vw;
+    }
+    .tech-stack img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .tech-stack {
+        gap: 0.7vw;
+        padding: 0.8rem 0 0.8rem 0;
+    }
+    .tech-stack img {
+        max-width: 32px;
+        min-width: 18px;
+        width: 12vw;
+        height: 12vw;
+        max-height: 32px;
+        min-height: 18px;
+    }
+}
+
+/* Estilos para la barra de navegación */
+nav {
+    background: rgba(35,36,58,0.95);
+    padding: 0.7rem 0;
+    text-align: center;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,0.15);
+    border-bottom: 1px solid #23243a;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    transition: background 0.5s cubic-bezier(.4,0,.2,1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 22px;
+}
+
+nav ul li a {
+    color: #d1d1e6;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.08rem;
+    letter-spacing: 1px;
+    padding: 7px 0;
+    position: relative;
+    transition: color 0.35s cubic-bezier(.4,0,.2,1);
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #4e54c8 0%, #8f94fb 100%);
+    transition: width 0.35s cubic-bezier(.4,0,.2,1);
+    margin: 0 auto;
+}
+
+nav ul li a:hover, nav ul li a:focus {
+    color: #8f94fb;
+}
+
+nav ul li a:hover::after, nav ul li a:focus::after {
+    width: 100%;
+}
+
+/* Estilos para las secciones de contenido */
+section {
+    padding: 2.5rem 2rem;
+    margin: 2.5rem auto;
+    max-width: 850px;
+    background: rgba(35,36,58,0.85);
+    border-radius: 14px;
+    box-shadow: 0 4px 32px 0 rgba(0,0,0,0.15);
+    transition: background 0.5s cubic-bezier(.4,0,.2,1), box-shadow 0.5s cubic-bezier(.4,0,.2,1);
+    border: 1.5px solid #23243a;
+}
+
+section h2 {
+    color: #8f94fb;
+    border-bottom: 2px solid #23243a;
+    padding-bottom: 12px;
+    margin-bottom: 22px;
+    font-size: 1.8rem;
+    font-family: 'Poppins', 'Nunito Sans', Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 0 1px 8px #181828;
+    transition: color 0.3s cubic-bezier(.4,0,.2,1);
+}
+
+section p, section article p, .project-item p {
+    text-align: justify;
+    font-family: 'Nunito Sans', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1.08rem;
+    letter-spacing: 0.01em;
+}
+
+/* Estilos específicos para los párrafos en la sección de proyectos */
+.project-item {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.9s cubic-bezier(.4,0,.2,1), transform 0.9s cubic-bezier(.4,0,.2,1);
+}
+
+.project-item.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-item:hover p {
+    background: linear-gradient(90deg, #4e54c8 60%, #23243a 100%);
+    color: #fff;
+    box-shadow: 0 2px 16px 0 rgba(79,84,200,0.15);
+}
+
+.project-item p {
+    background: linear-gradient(90deg, #23243a 70%, #2e2f4b 100%);
+    color: #f1f1f1;
+    padding: 1rem 1.3rem;
+    margin-bottom: 14px;
+    border-left: 4px solid #8f94fb;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 1px 8px 0 rgba(0,0,0,0.10);
+    font-size: 1.08rem;
+    transition: background 0.5s cubic-bezier(.4,0,.2,1), color 0.3s;
+}
+
+/* Estilos para el pie de página */
+footer {
+    text-align: center;
+    padding: 2rem 0 1.2rem 0;
+    margin-top: 40px;
+    background: rgba(25, 26, 35, 0.98);
+    color: #b7b8d7;
+    font-size: 1rem;
+    border-top: 1px solid #31324a;
+    box-shadow: 0 -2px 16px 0 rgba(0,0,0,0.18);
+    letter-spacing: 1px;
+    transition: background 0.5s cubic-bezier(.4,0,.2,1);
+
+}
